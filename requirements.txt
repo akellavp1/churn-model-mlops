@@ -10,5 +10,5 @@ pandas
 scikit-learn 
 mlflow
 joblib
-flask 
+flask 3.0.3 
 yaml
