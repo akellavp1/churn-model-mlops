@@ -11,4 +11,4 @@ scikit-learn
 mlflow
 joblib
 flask==3.0.3 
-yaml
+yaml==0.2.5
