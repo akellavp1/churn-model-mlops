@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/external/train.csv
       hash: md5
-      md5: 4765c4960be9cdbe249e97eda1b46c20
-      size: 391872
+      md5: 83f9c46c6c4e0352f4a0990dd90a83e2
+      size: 387900
     - path: src/data/load_data.py
       hash: md5
       md5: 1de1b5780f0f897223d87024bae9c1fa
@@ -14,15 +14,15 @@ stages:
     outs:
     - path: data/raw/train.csv
       hash: md5
-      md5: 411354fffa43656b1f33714239e09cf2
-      size: 120397
+      md5: f9a94f1874c7c8dc089faa5720da8df5
+      size: 120427
   split_data:
     cmd: python src/data/split_data.py --config=params.yaml
     deps:
     - path: data/raw/train.csv
       hash: md5
-      md5: 411354fffa43656b1f33714239e09cf2
-      size: 120397
+      md5: f9a94f1874c7c8dc089faa5720da8df5
+      size: 120427
     - path: src/data/split_data.py
       hash: md5
       md5: 93734f48178fa7ebcc5030f9d69b8ae6
@@ -30,23 +30,23 @@ stages:
     outs:
     - path: data/processed/churn_test.csv
       hash: md5
-      md5: 963d1e133580bf9a095fe956f2e9fb64
-      size: 24209
+      md5: 4bae5eb6f79d5fd142d4e78f0769492d
+      size: 36200
     - path: data/processed/churn_train.csv
       hash: md5
-      md5: 8e3b56fb8d60295e2b749c353333e9eb
-      size: 96317
+      md5: 282129227e30dee1895e1621c135467c
+      size: 84356
   model_train:
     cmd: python src/models/train_model.py --config=params.yaml
     deps:
     - path: data/processed/churn_test.csv
       hash: md5
-      md5: 963d1e133580bf9a095fe956f2e9fb64
-      size: 24209
+      md5: 4bae5eb6f79d5fd142d4e78f0769492d
+      size: 36200
     - path: data/processed/churn_train.csv
       hash: md5
-      md5: 8e3b56fb8d60295e2b749c353333e9eb
-      size: 96317
+      md5: 282129227e30dee1895e1621c135467c
+      size: 84356
     - path: src/models/train_model.py
       hash: md5
       md5: 092e08f802bece395b07d5c02ec58ef8
