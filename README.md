@@ -1,5 +1,17 @@
 # churn-model-mlops
 
+
+- Cookiecutter: Data science project structure
+- Data version control (DVC): Version control of the data assets and to make pipeline
+- Github: For code version control
+- GitHub Actions: To create the CI-CD pipeline
+- MLFlow: For model registry
+- Heroku: To deploy the application
+- Flask: To create a web app
+- EvidentlyAI: To evaluate and monitor ML models in production
+- Pytest: To implement the unit tests
+
+
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
