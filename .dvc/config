@@ -1,0 +1,8 @@
+[core]
+    remote = googledrive-dev-remote
+    autostage = true
+['remote "s3-churn-dvc"']
+    url = s3://churn-dvc-remote-bucket
+['remote "googledrive-dev-remote"']
+    url = gdrive://1SnvMnO_Opgn_ftoDwY5U43_yUu9q09G8
+    gdrive_acknowledge_abuse = true
